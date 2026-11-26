@@ -1,0 +1,42 @@
+@font-face { font-family: 'Luckiest Guy'; src: url('assets/fonts/LuckiestGuy-Regular.ttf'); font-display: swap; }
+@font-face { font-family: 'Fredoka'; src: url('assets/fonts/Fredoka-Variable.ttf'); font-weight: 300 700; font-display: swap; }
+:root { --ink: #1B1033; --cream: #FFF4DC; --teal: #1FB5AD; --mustard: #FFC23C; --magenta: #E5307E; --orange: #FF7A2F; --purple: #6C3FC5; }
+* { box-sizing: border-box; }
+html { background: var(--mustard); }
+body { margin: 0; font-family: 'Fredoka', system-ui, sans-serif; font-size: 19px; line-height: 1.55; color: var(--ink);
+       background: var(--mustard) radial-gradient(rgba(201,138,0,.25) 22%, transparent 24%) 0 0 / 22px 22px; }
+a { color: var(--ink); text-decoration-thickness: 2px; overflow-wrap: anywhere; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 18px 20px; }
+nav img { width: 52px; height: 52px; }
+nav .brand { font-family: 'Luckiest Guy'; font-size: 26px; letter-spacing: .02em; text-decoration: none; margin-right: auto; padding-top: 4px; }
+nav a:not(.brand) { font-weight: 600; text-decoration: none; }
+.hero img { width: 100%; height: auto; display: block; border: 6px solid var(--ink); border-radius: 28px; box-shadow: 10px 12px 0 var(--ink); }
+h1, h2 { font-family: 'Luckiest Guy'; font-weight: 400; letter-spacing: .02em; line-height: 1.05; }
+h1 { font-size: clamp(40px, 7vw, 76px); margin: 40px 0 10px; color: var(--orange); -webkit-text-stroke: 8px var(--ink); paint-order: stroke fill; text-shadow: 5px 6px 0 var(--ink); }
+h2 { font-size: clamp(30px, 4.6vw, 46px); margin: 0 0 12px; }
+.lede { font-size: 23px; font-weight: 500; max-width: 760px; }
+.cta { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 26px 0 50px; }
+.button { display: inline-block; font-family: 'Luckiest Guy'; font-size: 26px; padding: 16px 28px 10px; background: var(--magenta); color: var(--cream);
+          text-decoration: none; border: 5px solid var(--ink); border-radius: 18px; box-shadow: 6px 7px 0 var(--ink); }
+.button:hover { transform: translate(-2px, -2px); box-shadow: 8px 9px 0 var(--ink); }
+.price { font-weight: 600; }
+.card { background: var(--cream); border: 5px solid var(--ink); border-radius: 26px; box-shadow: 8px 10px 0 var(--ink); padding: 28px; margin: 0 0 44px; }
+.feature { display: grid; grid-template-columns: 1fr; gap: 22px; align-items: center; }
+.feature img { width: 100%; height: auto; border-radius: 14px; border: 4px solid var(--ink); }
+@media (min-width: 860px) { .feature { grid-template-columns: 1fr 1.5fr; } .feature.flip { grid-template-columns: 1.5fr 1fr; } .feature.flip > div { order: 2; } }
+.soon { background: var(--teal); }
+.soon .badge { display: inline-block; font-family: 'Luckiest Guy'; background: var(--mustard); border: 4px solid var(--ink); border-radius: 12px; padding: 6px 12px 2px; transform: rotate(-3deg); margin-bottom: 10px; }
+.soon img, .soon video { width: 100%; height: auto; border: 4px solid var(--ink); border-radius: 14px; display: block; }
+ul.checks { padding-left: 0; list-style: none; } ul.checks li { padding-left: 34px; position: relative; margin: 6px 0; }
+ul.checks li::before { content: '★'; position: absolute; left: 0; color: var(--magenta); -webkit-text-stroke: 1px var(--ink); font-size: 22px; line-height: 1.2; }
+.doc h2 { font-size: 30px; margin-top: 30px; }
+details { border-top: 3px dashed rgba(27,16,51,.3); padding: 14px 0; } details summary { font-weight: 600; font-size: 21px; cursor: pointer; }
+footer { padding: 30px 0 60px; font-size: 16px; display: flex; flex-wrap: wrap; gap: 18px; }
+kbd { font-family: system-ui, sans-serif; font-weight: 700; font-size: .85em; background: #fff; border: 2px solid var(--ink); border-radius: 7px; padding: 1px 7px; box-shadow: 2px 2px 0 var(--ink); }
+.badge { display: inline-block; font-family: 'Luckiest Guy'; background: var(--mustard); border: 4px solid var(--ink); border-radius: 12px; padding: 6px 12px 2px; transform: rotate(-3deg); margin-bottom: 10px; box-shadow: 3px 4px 0 var(--ink); }
+.say { font-size: 21px; font-weight: 600; background: #fff; border: 3px dashed var(--ink); border-radius: 18px; padding: 10px 16px; }
+.wide { grid-template-columns: 1fr !important; }
+.feature video { width: 100%; height: auto; display: block; border-radius: 14px; border: 4px solid var(--ink); }
+.nl { background: var(--teal); }
+.nl .say { background: var(--cream); }
